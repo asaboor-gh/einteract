@@ -35,7 +35,7 @@ This module is a wrapper around the `ipyslides.interaction` modulde.
 """
 
 __all__ = [
-    'InteractBase','callback', 'monitor', 'print_error', 'interactive','interact', 
+    'InteractBase', 'var', 'callback', 'monitor', 'print_error', 'interactive','interact', 
     'patched_plotly', 'plt2html', 'hstack', 'vstack', 'html',
     'ListWidget', 'AnimationSlider', 'JupyTimer', 'Output', 
 ]
@@ -45,6 +45,7 @@ from contextlib import suppress
 from ipywidgets import DOMWidget, HBox, VBox
 from ipyslides.interaction import (
     InteractBase, 
+    var,
     callback, 
     monitor,
     interact, 
