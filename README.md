@@ -77,9 +77,18 @@ def detect_fs(fig, fs):
     html = ipw.HTML('**Select Box/Lesso on figure traces**'),
     A = (1,10), omega = (0,20), phi = (0,10),
     sdata = 'fig.selected', cdata = 'fig.clicked', fs = '.isfullscreen',
-    app_layout={'left_sidebar':['A','omega','phi','html','out-main'], 'center': ['fig','out-click'],'pane_widths':[3,7,0]},
-    grid_css={'.left-sidebar':{'background':'whitesmoke'},':fullscreen': {'height': '100vh'}}, 
-    )
+    post_init = lambda dash: (
+        dash.set_css({
+            '.left-sidebar':{'background':'whitesmoke'},
+            ':fullscreen': {'height': '100vh'}}
+        ),
+        dash.set_layout(
+            left_sidebar=['A','omega','phi','html','out-main'], 
+            center=['fig','out-click'], 
+            pane_widths=[3,7,0],
+        ),
+    ),
+)
 def plot(fig:go.FigureWidget, A, omega,phi): # adding type hint allows auto-completion inside function
     fig.data = []
     x = np.linspace(0,10,100)
