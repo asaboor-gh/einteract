@@ -56,44 +56,44 @@ import pandas as pd
 import plotly.graph_objects as go
 import einteract as ei
 
-@ei.callback('out-click', throttle = 200) # limit click rate by 200 ms
+dash = ei.DashLab(
+    fig = ei.patched_plotly(go.FigureWidget()), 
+    html = ipw.HTML('**Select Box/Lesso on figure traces**'),
+    A = (1,10), omega = (0,20), phi = (0,10),
+    sdata = 'fig.selected', cdata = 'fig.clicked', fs = '.isfullscreen',
+)
+@dash.callback('out-click', throttle = 200) # limit click rate by 200 ms
 def on_click(cdata,html):
     display(pd.DataFrame(cdata or {}))
 
+@dash.callback('out-select')
 def on_select(sdata, html):
     plt.scatter(sdata.get('xs',[]),sdata.get('ys',[]))
     html.value = ei.plt2html().value
 
+@dash.callback('out-fs')
 def detect_fs(fig, fs):
     print("isfullscreen = ",fs)
     fig.layout.autosize = False # double trigger
     fig.layout.autosize = True
 
-@ei.interact(
-    on_select,
-    on_click,
-    detect_fs,
-    fig = ei.patched_plotly(go.FigureWidget()), 
-    html = ipw.HTML('**Select Box/Lesso on figure traces**'),
-    A = (1,10), omega = (0,20), phi = (0,10),
-    sdata = 'fig.selected', cdata = 'fig.clicked', fs = '.isfullscreen',
-    post_init = lambda dash: (
-        dash.set_css({
-            '.left-sidebar':{'background':'whitesmoke'},
-            ':fullscreen': {'height': '100vh'}}
-        ),
-        dash.set_layout(
-            left_sidebar=['A','omega','phi','html','out-main'], 
-            center=['fig','out-click'], 
-            pane_widths=[3,7,0],
-        ),
-    ),
-)
+@dash.callback
 def plot(fig:go.FigureWidget, A, omega,phi): # adding type hint allows auto-completion inside function
     fig.data = []
     x = np.linspace(0,10,100)
     fig.add_trace(go.Scatter(x=x, y=A*np.sin(omega*x + phi), mode='lines+markers'))
 
+dash.set_css({
+    '.left-sidebar':{'background':'whitesmoke'},
+    ':fullscreen': {'height': '100vh'}}
+)
+dash.set_layout(
+    left_sidebar=['A','omega','phi','html','out-main'], 
+    center=['fig','out-click'], 
+    pane_widths=[3,7,0],
+)
+
+dash
 ```
 ![einteract.gif](einteract.gif)
 
