@@ -56,7 +56,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import einteract as ei
 
-dash = ei.DashLab(
+dash = ei.Dashboard(
     fig = ei.patched_plotly(go.FigureWidget()), 
     html = ipw.HTML('**Select Box/Lesso on figure traces**'),
     A = (1,10), omega = (0,20), phi = (0,10),

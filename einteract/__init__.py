@@ -6,7 +6,7 @@ This module provides extended interactive capabilities including:
 **Core Components**:
 
 - InteractBase: Base class for creating interactive dashboard applications
-- DashLab: A class for creating interactive dashboards with a ready-to-use API and post-initialization callbacks.
+- Dashboard: A class for creating interactive dashboards with a ready-to-use API and post-initialization callbacks.
 - interact/interactive: wrapper functions for creating simple interactive widgets
 - callback: Decorator for widget event callbacks to be used in subclasses of InteractBase
 - monitor: Decorator to monitor general functions. All of its parameters are in callback too,
@@ -36,7 +36,7 @@ This module is a wrapper around the `ipyslides.interaction` modulde.
 """
 
 __all__ = [
-    'InteractBase', 'DashLab', 'var', 'callback', 'monitor', 'print_error', 'interactive','interact', 
+    'InteractBase', 'Dashboard', 'var', 'callback', 'monitor', 'print_error', 'interactive','interact', 
     'patched_plotly', 'plt2html', 'hstack', 'vstack', 'html',
     'ListWidget', 'AnimationSlider', 'JupyTimer', 'Output', 
 ]
@@ -46,7 +46,7 @@ from contextlib import suppress
 from ipywidgets import DOMWidget, HBox, VBox
 from ipyslides.interaction import (
     InteractBase, 
-    DashLab,
+    Dashboard,
     var,
     callback, 
     monitor,
