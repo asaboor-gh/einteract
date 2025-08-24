@@ -1,3 +1,5 @@
+<center style="color:red">This package has been archived and is no longer maintained. For enhanced interactive dashboards in Jupyter, consider using <a href="https://github.com/asaboor-gh/dashlab"> dashlab</a>.</center>
+
 # einteract
 
 [![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/einteract-docs/notebooks/index.html?path=einteract.ipynb)
@@ -40,8 +42,7 @@ pip install -e .
     - Add `ipywidgets.Button` to hold callbacks which use it as paramter for a click
 - **Plotly Integration**: Modified plotly support with additional traits like `selected` and `clicked`
 - **HTML support**: 
-    - Convert matplotlib plots to HTML format using `plt2html`.
-    - Any (supported) python object can be converted to html using `html`, `hstack` and `vstack` function.
+   - Any (supported) python object can be converted to html using `hstack` and `vstack` function.
 - **JupyTimer**: A non-blocking widget timer for Jupyter Notebooks without threading/asyncio.
 - **Event Callbacks**: Easy widget event handling with the `@callback` decorator inside the subclass of `InteractBase` or multiple functions in `interact/interactive` functions.
 - **Full Screen Mode**: Transform your dashboards into full-screen applications by added button.
@@ -69,7 +70,7 @@ def on_click(cdata,html):
 @dash.callback('out-select')
 def on_select(sdata, html):
     plt.scatter(sdata.get('xs',[]),sdata.get('ys',[]))
-    html.value = ei.plt2html().value
+    plt.show()
 
 @dash.callback('out-fs')
 def detect_fs(fig, fs):

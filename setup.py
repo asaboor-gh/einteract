@@ -19,7 +19,7 @@ REQUIRES_PYTHON = ">=3.9"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    "ipyslides",
+    "dashlab",
 ]
 
 # What packages are optional?

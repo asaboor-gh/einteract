@@ -1,4 +1,4 @@
-ipyslides
+dashlab
 numpy
 pandas
 matplotlib
