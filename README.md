@@ -1,4 +1,4 @@
-<center style="color:red">This package has been archived and is no longer maintained. For enhanced interactive dashboards in Jupyter, consider using <a href="https://github.com/asaboor-gh/dashlab"> dashlab</a>.</center>
+<center style="color:red">This package is deprecated and is no longer maintained. For enhanced interactive dashboards in Jupyter, consider using <a href="https://github.com/asaboor-gh/dashlab"> dashlab</a>.</center>
 
 # einteract
 
