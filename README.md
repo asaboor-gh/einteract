@@ -1,6 +1,7 @@
-<center style="color:red">This package is deprecated and is no longer maintained. For enhanced interactive dashboards in Jupyter, consider using <a href="https://github.com/asaboor-gh/dashlab"> dashlab</a>.</center>
-
 # einteract
+
+> [!WARNING]
+> This package has been deprecated and is no longer actively maintained. For improved interactive dashboards within Jupyter and to access future developments, we recommend migrating to [DashLab](https://github.com/asaboor-gh/dashlab).
 
 [![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/einteract-docs/notebooks/index.html?path=einteract.ipynb)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/asaboor-gh/einteract/HEAD?urlpath=%2Fdoc%2Ftree%2Feinteract-demo.ipynb)
