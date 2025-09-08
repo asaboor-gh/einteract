@@ -3,7 +3,7 @@
 > [!WARNING]
 > This package has been deprecated and is no longer actively maintained. For improved interactive dashboards within Jupyter and to access future developments, we recommend migrating to [DashLab](https://github.com/asaboor-gh/dashlab).
 
-[![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/einteract-docs/notebooks/index.html?path=einteract.ipynb)
+[![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/litepad/notebooks/index.html?path=einteract.ipynb)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/asaboor-gh/einteract/HEAD?urlpath=%2Fdoc%2Ftree%2Feinteract-demo.ipynb)
 [![PyPI version](https://badge.fury.io/py/einteract.svg)](https://badge.fury.io/py/einteract)
 [![Downloads](https://pepy.tech/badge/einteract)](https://pepy.tech/project/einteract)
@@ -30,7 +30,7 @@ pip install -e .
 **✨ Try it in your browser ✨**
 | Jupyter Lab  | Notebook | Binder |
 |----|---|--- |
-|  [![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/einteract-docs/lab/index.html?path=einteract.ipynb)  |  [![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/einteract-docs/notebooks/index.html?path=einteract.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/asaboor-gh/einteract/HEAD?urlpath=%2Fdoc%2Ftree%2Feinteract-demo.ipynb) |
+|  [![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/litepad/lab/index.html?path=einteract.ipynb)  |  [![](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://asaboor-gh.github.io/litepad/notebooks/index.html?path=einteract.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/asaboor-gh/einteract/HEAD?urlpath=%2Fdoc%2Ftree%2Feinteract-demo.ipynb) |
 
 ## Features
 
