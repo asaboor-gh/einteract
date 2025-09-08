@@ -9,4 +9,9 @@ import dashlab
 sys.modules[__name__] = dashlab # Redirect to dashlab module
 dashlab.InteractBase = dashlab.DashboardBase # For backward compatibility
 
-print("Warning: einteract module is deprecated. Use dashlab module instead.")
+print("Warning: einteract module will be deprecated. Use dashlab module instead.")
+
+major, minor, *_ = [int(x) for x in dashlab.__version__.split(".")]
+if major >= 0 and minor >= 2: # dashlab version >= 0.2 will remove support for einteract
+    raise ImportError("einteract module is deprecated. Use dashlab module instead.")
+    
